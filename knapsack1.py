@@ -52,9 +52,8 @@ def is_feasible(weightscore,constraint):
 
 
 print(score_weight(generate_chrome(),cost))
-
         
-def iteration(n):
+def main(n):
     "Iterate and save best result"
     optimal=0
     best_binary=[]
@@ -75,8 +74,7 @@ def iteration(n):
                 "Optimal binary",best_binary,"Weight:",best_weight)
     return optimal,"Best binary is",best_binary,"at weight of:",best_weight
 
-print("Optimal value of:",iteration(30000))
-#execute()
+print("Optimal value of:",main(30000))
 '''
 c=generate_chrome()
 score_value(c,value)
