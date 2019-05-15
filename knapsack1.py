@@ -12,7 +12,7 @@ cost = [
 ]
 
 constraint = 200000
-'''add constraint on cost value'''
+'''add constraint on cost value.'''
 
 def generate_chrome(num_gene=15):
     '''generate one random chromosome values '''
@@ -23,7 +23,7 @@ def generate_chrome(num_gene=15):
     return chromosome
 
 def score_weight(chromosome,cost):
-    '''to score one chromosome
+    '''to score one chromosome.
 
     chromosome: list
     '''
