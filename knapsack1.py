@@ -45,6 +45,7 @@ def score_value(chromosome,value):
     return sum(valuelist)
 
 def is_feasible(weightscore,constraint):
+    '''predicate on feasibility, that is values less than constraint'''
     if weightscore < constraint:
         return True
     return False
