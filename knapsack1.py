@@ -38,33 +38,24 @@ def score_value(chromosome,value):
     chromosome: list
     '''
     valuelist=[]
-    #print(chromosome)
     for i in range(len(chromosome)):
         score=value[i]*chromosome[i]
         valuelist.append(score)
     return sum(valuelist)
 
-#print(generate_chrome())
 def is_feasible(weightscore,constraint):
     if weightscore < constraint:
         return True
     return False
-
-
-print(score_weight(generate_chrome(),cost))
         
 def main(n):
     "Iterate and save best result"
     optimal=0
     best_binary=[]
     for i in range(n):
-       # print(i)
         c=generate_chrome()
-        #print("Chromosome values",c)
         v = score_value(c,value)
-        #print("V values:",v)
         w = score_weight(c,cost)
-       # print("Weight values",w)
         if is_feasible(w,constraint):
             if v>optimal:
                 optimal=v
@@ -75,8 +66,4 @@ def main(n):
     return optimal,"Best binary is",best_binary,"at weight of:",best_weight
 
 print("Optimal value of:",main(30000))
-'''
-c=generate_chrome()
-score_value(c,value)
 
-'''
