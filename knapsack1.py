@@ -53,31 +53,6 @@ def is_feasible(weightscore,constraint):
 
 print(score_weight(generate_chrome(),cost))
 
-def execute():
-    '''generate and return feasible chromosome binary, weight, and
-    value score, and assign value to max
-    if is better score than previous
-    '''
-    current_binary=[]
-    max_value = 0
-    c = generate_chrome()
-    print("c",c)
-    w=score_weight(c,cost)
-    print("Weight score",w)
-    print("Constraint",constraint)
-    v=score_value(c,value)
-    print("Value score",v)
-    if is_feasible(w,constraint):
-        print("Feasible")
-        current_binary = c
-        max_value = v
-        print(
-        "Max chromosome",current_binary,
-        "value is:",max_value
-        )
-    else:
-        #return False
-        print("Not Feasible solution")
         
 def iteration(n):
     "Iterate and save best result"
